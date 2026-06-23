@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "../include/helpers.hpp"
+#include "../include/appmanager.hpp"
 
 std::string evaluate(const std::string& line) {
     if (line.empty()) {
@@ -10,7 +11,7 @@ std::string evaluate(const std::string& line) {
     std::vector<std::string> args = Helpers::split(line, " ");
 
     if (args.empty()) {
-        return "wrong";
+        return "null";
     }
 
     std::string operation = args[0];
@@ -22,6 +23,10 @@ std::string evaluate(const std::string& line) {
         
         std::cout << args[1] << std::endl;
         return "ok";
+    }
+    if (operation == "inapp") {
+        Apps::openApp(args[1]);
+        return "should ok";
     }
     
     return "wrong";
