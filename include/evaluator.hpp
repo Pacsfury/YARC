@@ -2,4 +2,4 @@
 #include <string>
 #include "helpers.hpp"
 
-void* evaluate(const std::string& line);
+std::string evaluate(const std::string& line);
