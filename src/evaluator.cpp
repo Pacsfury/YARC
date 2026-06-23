@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include "../include/helpers.hpp"
 #include "../include/appmanager.hpp"
 
