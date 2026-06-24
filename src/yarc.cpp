@@ -10,8 +10,10 @@ int main() {
         
         std::string result = evaluate(line);
         
-        std::cout << "< " << result << std::endl; 
-        std::cout << "> " <<           std::endl;
+        if (result != "") {
+            std::cout << "< " << result << std::endl; 
+        }
+        std::cout << "> ";
     }
     
     return 0;

@@ -15,8 +15,9 @@ namespace Apps {
 
         while (std::getline(appfile, line)) {
             std::string result = evaluate(line);
-        
-            std::cout << "< " << result << std::endl; 
+            if (result != "") {
+                std::cout << "< " << result << std::endl;
+            }
         }
         return "ok";
 

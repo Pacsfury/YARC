@@ -15,6 +15,13 @@ std::string evaluate(const std::string& line) {
         return "null";
     }
 
+    std::string message;
+    if (args.size() > 1) {
+        for (size_t i = 1; i < args.size(); ++i) {
+            message += (args[i] + " ");
+        }
+    }
+
     std::string operation = args[0];
 
     if (operation == "print") {
@@ -28,6 +35,14 @@ std::string evaluate(const std::string& line) {
     if (operation == "inapp") {
         Apps::openApp(args[1]);
         return "should ok";
+    }
+    if (operation == "echo") {
+
+        std::cout << message << std::endl;
+        return "";
+    }
+    if (operation == "return") {
+        return message;
     }
     
     return "wrong";
