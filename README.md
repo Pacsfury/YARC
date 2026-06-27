@@ -37,14 +37,14 @@ g++ -Iinclude src/*.cpp -o yarc
 
 Tree:
 ```
-main
-| apps                 => I recommend putting your apps here
+main/
+| apps/                 => I recommend putting your apps here
 | | app1.yrc
-| include
+| include/
 | | appmanager.hpp
 | | evaluator.hpp
 | | helpers.hpp
-| src
+| src/
 | | appmanager.cpp
 | | evaluator.cpp
 | | helpers.cpp
