@@ -13,6 +13,9 @@ YARC is under constant development, but here are the current commands:
 
 If any unexisting comment is put, `wrong` will be returned.
 
+## Input and Output
+Standart input is the command you enter, represented in >. The output is the result (usually ok/wrong), shown as <. Other outputs, like `print`or `echo` don't have < as they use C++'s `std::cout`.
+
 ## YARC apps
 YARC apps are a `.yrc` file that can be executed in the console. For example, an app could be:
 ```
